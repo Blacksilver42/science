@@ -1,0 +1,73 @@
+#hiring {
+	display: none;
+	border: 1px solid black;
+	position: relative;
+	top: 1px;
+	left: 1px;
+	padding: 10px;
+	padding-top: 20px;
+	width: 400px;
+}
+
+#hiring-button {
+	position: absolute;
+	width: max-content;
+	z-index: 2;
+}
+
+.hire-type, .hire-amt, .hire-cost, .hire-buttons {
+	display: inline;
+}
+
+#hiring ul {
+	padding-left: 20px;
+	padding-right: 10px;
+	width: auto;
+}
+
+#hiring li {
+	width: auto;
+	border-bottom: 1px solid grey;
+	position: relative;
+}
+
+#hiring li:last-child {
+	border-bottom: none;
+}
+
+#hiring .hire-entry {
+	list-style: none;
+	overflow: hidden;
+	width: 375px;
+}
+
+#hiring p.hire-amt::before {
+	content: "(";
+}
+
+#hiring p.hire-amt::after {
+	content: ")";
+}
+
+#hiring p.hire-cost {
+	color: blue;
+}
+
+#hiring p.hire-cost::before {
+	content: "$";
+}
+
+#hiring div.hire-buttons {
+	float: right;
+}
+
+#hiring p.thing-desc {
+	display: block;
+}
+
+.droparrow {
+	display: inline-block;
+	margin: 0;
+	min-width: 15px;
+	text-align: center;
+}

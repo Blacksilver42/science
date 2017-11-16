@@ -1,0 +1,64 @@
+/************************************************ GENERICS & CLASSES */
+
+
+*,div,p,h1,h2,h3 {
+	/* If Futura is available, use it.
+	 * Else, it'll fall back to Arial or sans.
+	 */
+	font-family: Futura, Arial, sans-serif;
+}
+
+
+
+button {
+	margin: 1px;
+}
+
+
+
+.notenough {
+	/* Little popup when you don't have enough of X to do Y. */
+	display: none;
+	font-style: italic;
+	color: darkgrey;
+	margin-left: 10px;
+}
+
+
+
+.box {
+	margin: 10px 2px;
+	padding: 5px;
+	width: max-content;
+	min-height: 2em;
+}
+
+
+.thing-desc {
+	color: grey;
+	font-size: 10px;
+	font-style: italic;
+	margin-top: 7px;
+}
+
+
+
+
+/************************************************ OPT FRAME */
+
+#cog {
+	position: absolute;
+	bottom: 4em;
+	right: 15px;
+	width: 2em;
+	cursor: pointer;
+}
+
+#cogmenu {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	border-top: 2px solid blue;
+	padding: 5px;
+}

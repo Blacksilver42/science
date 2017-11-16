@@ -1,0 +1,55 @@
+#header {
+	border-bottom: 1px solid blue;
+	padding: 10px;
+	padding-left: 0;
+}
+
+
+
+/************************************************ #stats */
+
+
+
+#stats {
+	width: 100%;
+	font-size: 1.5em;
+}
+
+#stats p {
+	display: inline-block;
+	margin: 5px;
+}
+
+#stats p:first-child {
+	width: 1em;
+	text-align: right;
+}
+
+#stat-sci, #stat-money {
+	width: max-content;
+	margin: 0;
+}
+
+
+/************************************************ #button */
+
+
+#button {
+	margin: 5px;
+	position: absolute;
+	right: 10px;
+	top: 19px;
+}
+
+#button h1 {
+	margin: 5px;
+}
+
+#sciPerClick::before {
+	content: "+";
+}
+
+#sciPerClick::after {
+	content:"\269b/click";
+}
+
