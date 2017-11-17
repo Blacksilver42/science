@@ -8,6 +8,7 @@
 	<script src="js/animateRotate.js"></script>
 	<script src="js/dropmenu.js"></script>
 	<script src="js/hiring.js"></script>
+	<script src="js/stat.js"></script>
 	<script src="js/science.js"></script>
 	
 	
@@ -126,7 +127,20 @@
 <div class="box">
 	<button class="dropbutton" onclick="toggleDropMenu('#stats');">Stats<p class="droparrow">&#128898;</p></button>
 	<div id="stats" class="dropdown">
-		Foo bar baz
+		<table>
+			<tr>
+				<th>Stat</th>
+				<th colspan=2>Diff/sec</th>
+			</tr>
+			<tr>
+				<td>&#9883;</td>
+				<td id="sci-diff"></td>
+			</tr>
+			<tr>
+				<td>$</td>
+				<td id="m-diff"></td>
+			</tr>
+		</table>
 	</div>
 </div>
 

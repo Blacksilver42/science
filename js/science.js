@@ -2,7 +2,7 @@
 
 
 
-/// Stats
+/// Numbers
 var sci = 0;
 var money = 0;
 
@@ -21,10 +21,10 @@ var RR_sellexp = 0;
 /// Cog menu
 var menu = false;
 
+
+/// Classes
 var hire = new Hire();
-
-
-
+var stat = new Stat();
 
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
@@ -35,7 +35,7 @@ function clickbutton(){
 	sci+=clickamt;
 }
 
-function updateStats(){
+function updateNumbers(){
 	$("#sci").html(sci);
 	$("#money").html(money);
 }
@@ -88,7 +88,8 @@ function cogmenu(){
 
 $(document).ready(function(){
 	setInterval(addProfit, 1000);
-	setInterval(updateStats, 10);
+	setInterval(updateNumbers, 20);
+	
 	$("#cog").css("bottom", $("#cogmenu").height()+20);
 	hire.updateEmploy();
 	if(navigator.userAgent.match(/edge/i)){
