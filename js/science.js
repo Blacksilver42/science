@@ -23,8 +23,8 @@ var menu = false;
 
 
 /// Classes
-var hire = new Hire();
 var stat = new Stat();
+var hire = new Hire();
 
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
