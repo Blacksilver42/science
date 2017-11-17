@@ -17,11 +17,11 @@ var EMPLOY_INCREASE = 1.15;
 
 class Hire {
 	constructor(){
-		this.updateEmploy();
+		this.update();
 	}
 
 
-	updateEmploy(){
+	update(){
 		for(var key in employ){
 			employ[key].cost = Math.floor(BASE_EMPLOY_DATA[key].cost * Math.pow(EMPLOY_INCREASE, employ[key].amt));
 			$("#hire-"+key+" .hire-amt").text(employ[key].amt);
@@ -39,13 +39,13 @@ class Hire {
 		if(money < employ[type].cost) return;
 		money -= employ[type].cost;
 		employ[type].amt++;
-		this.updateEmploy();
+		this.update();
 	}
 
 	fire(type) {
 		if(employ[type].amt < 1) return;
 		employ[type].amt--;
-		this.updateEmploy();
+		this.update();
 		money += employ[type].cost/2
 	}
 

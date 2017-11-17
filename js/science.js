@@ -29,7 +29,10 @@ var hire = new Hire();
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
 
-
+function recalc(){
+	hire.update();
+	stat.update();
+}
 
 function clickbutton(){
 	sci+=clickamt;
@@ -89,9 +92,9 @@ function cogmenu(){
 $(document).ready(function(){
 	setInterval(addProfit, 1000);
 	setInterval(updateNumbers, 20);
-	
+	setInterval(recalc, 5000);
 	$("#cog").css("bottom", $("#cogmenu").height()+20);
-	hire.updateEmploy();
+	hire.update();
 	if(navigator.userAgent.match(/edge/i)){
 		$("#UserAgent").text("Working on proper Edge support.");
 	}
