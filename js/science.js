@@ -10,7 +10,7 @@ var money = 0;
 var mprofit = 0;
 var sprofit = 0;
 
-
+/// sci/click
 var clickamt = 1;
 
 /// Sell resarch rights
@@ -29,22 +29,24 @@ var hire = new Hire();
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
 
-function recalc(){
+function recalc(){ // call ALL the update functions
 	hire.update();
 	stat.update();
+	updateNumbers();
 }
 
-function clickbutton(){
+function clickbutton(){ // called when you click the button
 	sci+=clickamt;
 }
 
-function updateNumbers(){
+function updateNumbers(){ // Update top numbers
 	$("#sci").html(sci);
 	$("#money").html(money);
 }
 
 function addProfit(){
-	sci += mprofit;
+	sci += sprofit;
+	money += mprofit;
 }
 
 function sellRR(i){
