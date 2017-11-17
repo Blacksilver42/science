@@ -1,4 +1,5 @@
 var ARROW_TIME = 500;
+var MOVE_TIME = 800;
 
 function toggleDropMenu(id){
 	var arrow = $(id).siblings(".dropbutton").children(".droparrow");
@@ -9,5 +10,5 @@ function toggleDropMenu(id){
 		// currently hidden; open.
 		arrow.animateRotate(0,-270,ARROW_TIME, 'swing');
 	}
-	$(id).animate({width: "toggle", height:"toggle"}, 1000);
+	$(id).animate({width: "toggle", height:"toggle", padding:"toggle"}, MOVE_TIME, 'swing');
 }
