@@ -4,8 +4,6 @@ var employ_costs = {
 };
 
 var EMPLOY_INCREASE = 1.15;
-var ARROW_TIME = 700
-var hiretgl_running = 0;
 
 class Hire {
 	constructor(){
