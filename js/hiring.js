@@ -16,21 +16,6 @@ class Hire {
 		this.show = false;
 	}
 
-	toggle(){
-		if(hiretgl_running>0)return;
-		hiretgl_running = 2;
-		$("#hiring").animate({width: "toggle", height:"toggle"}, 1000, function(){hiretgl_running--});
-		var arrow = $("#hiring-button .droparrow");
-		if(this.show){
-			// currently open; hide.
-			arrow.animateRotate(90,360,ARROW_TIME, 'swing', function(){hiretgl_running--});
-			this.show = false;
-		} else {
-			// currently hidden; open.
-			arrow.animateRotate(0,-270,ARROW_TIME, 'swing', function(){hiretgl_running--});
-			this.show = true;
-		}
-	}
 
 	updateEmploy(){
 		for(var key in this.employ){

@@ -6,21 +6,21 @@
 
 
 
-/************************************************ #stats */
+/************************************************ #header-numbers */
 
 
 
-#stats {
+#header-numbers {
 	width: 100%;
 	font-size: 1.5em;
 }
 
-#stats p {
+#header-numbers p {
 	display: inline-block;
 	margin: 5px;
 }
 
-#stats p:first-child {
+#header-numbers p:first-child {
 	width: 1em;
 	text-align: right;
 }

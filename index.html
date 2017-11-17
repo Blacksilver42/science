@@ -6,17 +6,16 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 	<script src="js/animateRotate.js"></script>
+	<script src="js/dropmenu.js"></script>
 	<script src="js/hiring.js"></script>
 	<script src="js/science.js"></script>
-	
 	
 	
 	<link rel="stylesheet" type="text/css" href="/master.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/hiring.css">
-	
-	
+	<link rel="stylesheet" type="text/css" href="css/dropdown.css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -24,7 +23,7 @@
 
 
 <div id="header">
-	<div id="stats">
+	<div id="header-numbers">
 		<div id="stat-sci">
 			<p>&#9883;</p>
 			<p id="sci">JS error</p>
@@ -76,8 +75,8 @@
 
 
 <div class="box">
-	<button id="hiring-button" onclick="hire.toggle();">Hiring <p class="droparrow">&#128898;</p></button>
-	<div id="hiring">
+	<button class="dropbutton" onclick="toggleDropMenu('#hiring');">Hiring <p class="droparrow">&#128898;</p></button>
+	<div id="hiring" class="dropdown">
 		<ul>
 			<li class="hire-entry" id="hire-intern">
 				<p class="hire-type">Intern</p>
@@ -125,7 +124,10 @@
 
 
 <div class="box">
-	Stats
+	<button class="dropbutton" onclick="toggleDropMenu('#stats');">Stats<p class="droparrow">&#128898;</p></button>
+	<div id="stats" class="dropdown">
+		Foo bar baz
+	</div>
 </div>
 
 
