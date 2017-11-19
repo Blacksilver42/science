@@ -92,11 +92,19 @@ function cogmenu(){
 
 
 $(document).ready(function(){
+
+	/// Intervals:
 	setInterval(addProfit, 1000);
 	setInterval(updateNumbers, 20);
 	setInterval(recalc, 5000);
+
+	// Dynamic css
 	$("#cog").css("bottom", $("#cogmenu").height()+20);
-	hire.update();
+	$(".dropdown").css("max-width", $(document).width());
+	
+	recalc();
+
+	// edge? display a warning.
 	if(navigator.userAgent.match(/edge/i)){
 		$("#UserAgent").text("Working on proper Edge support.");
 	}

@@ -4,7 +4,8 @@ class Stat {
 	}
 	
 	update(){
-		var box = $("#stats");
-		
+		var box = $("#stats table");
+		$("#stats #sci-diff").text(sprofit);
+		$("#stats #m-diff").text(mprofit);
 	}
 }
