@@ -70,7 +70,6 @@ function sellRR(i){
 
 ///////////////////////////////////////////////// FUNCTIONS -- COG MENU
 
-
 function cogmenu(){
 	// Toggle cog menu
 	var box = $("#cogmenu");
@@ -79,7 +78,7 @@ function cogmenu(){
 		$("#cog").animateRotate(0,-90);
 		menu = false;
 	} else {
-		box.animate({top:$(document).height()-box.height()*1.5});
+		box.animate({top:$(document).height()-box.height()});
 		$("#cog").animateRotate(0,90);
 		menu = true;
 	}
@@ -99,7 +98,7 @@ $(document).ready(function(){
 	setInterval(recalc, 5000);
 
 	// Dynamic css
-	$("#cog").css("bottom", $("#cogmenu").height()+20);
+	$("#cog").css("bottom", $("#cogmenu").height() + $("#cog").height()/2 + 5);
 	$(".dropdown").css("max-width", $(document).width());
 	
 	recalc();
