@@ -42,12 +42,12 @@ function updateNumbers(){ // Update top numbers
 }
 
 function addProfit(){
-	if(sci + profits.sci >= 0){
+	if((sci + profits.sci >= 0) && (money + profits.money >= 0)){
 		sci += profits.sci;
 		money += profits.money;
+		$("#header-numbers").css("color","black");
 	} else {
 		$("#header-numbers").css("color","red");
-		$("#header-numbers").animate({color:"#000"});
 	}
 }
 
@@ -68,6 +68,37 @@ function sellRR(i){
 	}
 }
 
+function descHover(e){
+	var obj = $(e.target);
+	if(!obj.hasClass("hire-entry")){
+		obj = obj.parent(".hire-entry");
+	}
+	obj = obj.children(".thing-desc");
+	obj.animate({height:"toggle", margin:"toggle"}, 'swing');
+}
+
+
+function save(){
+	Cookies.set('SCIENCE', {
+		sci: sci,
+		money: money,
+		stats: stats,
+		employ: employ,
+	});
+	$("#saved").show();
+	$("#saved").delay(500).fadeOut();
+}
+
+function load(){
+	var x = Cookies.get('SCIENCE');
+	if(x == undefined) return;
+	x = JSON.parse(x);
+	sci = x.sci;
+	money = x.money;
+	stats = x.stats;
+	employ = x.employ;
+	recalc();
+}
 
 
 ///////////////////////////////////////////////// FUNCTIONS -- COG MENU
@@ -93,16 +124,20 @@ function cogmenu(){
 
 
 $(document).ready(function(){
+	load();
 
 	/// Intervals:
 	setInterval(addProfit, 1000);
 	setInterval(updateNumbers, 20);
+	setInterval(save, 10000);
 	setInterval(recalc, 5000);
 
 	// Dynamic css
 	$("#cog").css("bottom", $("#cogmenu").height() + $("#cog").height()/2 + 5);
 	$(".dropdown").css("max-width", $(document).width());
 	
+	/// hover in #hiring
+	//$(".hire-entry").hover(descHover); $(".thing-desc").hide();
 
 	// edge? display a warning.
 	if(navigator.userAgent.match(/edge/i)){

@@ -5,6 +5,7 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	
 	<script src="js/animateRotate.js"></script>
 	<script src="js/data.js"></script>
@@ -121,7 +122,7 @@
 				</div>
 				<p class="thing-desc">
 					Qualified enough to be left alone in the lab.<br>
-					<b>1$ &rarr; 1&#9883;/sec</b>
+					<b>1$ &rarr; 2&#9883;/sec</b>
 				</p>
 			</li>
 		</ul>
@@ -173,7 +174,11 @@
 	<img id="cog" alt="Menu" onclick="cogmenu();" title="Menu"
 		src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqwW55NHAiJ20ghZHtdRiPZqH1-Nl9Z7jpTvdmx-Cx1qp3IkL0wQ">
 	<a href="http://github.com/Blacksilver42/science" target="_blank">github</a> &bull; <a href="/futura">Futura</a>
-<h2 style="width: 100%; clear:both">DISCLAIMER: WIP. Things will be broken sometimes.</h2>
+	<h2 style="width: 100%; clear:both">DISCLAIMER: WIP. Things will be broken sometimes.</h2>
+	<button onclick="save()">Save</button>
+	<button onclick="load(); ">Load</button>
+	<span id="saved" style="display:none color:grey">Saved</span>
+	<br>
 </div>
 
 </body>
