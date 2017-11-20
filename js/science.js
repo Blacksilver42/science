@@ -111,7 +111,7 @@ function cogmenu(){
 		$("#cog").animateRotate(0,-90);
 		menu = false;
 	} else {
-		box.animate({top:$(document).height()-box.height()});
+		box.animate({top:$(document).height()-box.height()-10});
 		$("#cog").animateRotate(0,90);
 		menu = true;
 	}
