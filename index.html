@@ -5,7 +5,9 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	
 	<script src="js/animateRotate.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/dropmenu.js"></script>
 	<script src="js/hiring.js"></script>
 	<script src="js/stat.js"></script>
@@ -95,7 +97,6 @@
 			</li>
 			
 			<li class="hire-entry" id="hire-accountant">
-				<p class="hire-obj">
 				<p class="hire-type">Accountant</p>
 				<p class="hire-amt">0</p>
 				<p class="hire-cost">---</p>
@@ -106,7 +107,21 @@
 				<p class="thing-desc">
 					Spreadsheet whiz.
 					<br>
-					<b>+1 &#9883; &rarr; $/sec</b>
+					<b>1&#9883; &rarr; 1$/sec</b>
+				</p>
+			</li>
+			
+			<li class="hire-entry" id="hire-assist">
+				<p class="hire-type">Assistant</p>
+				<p class="hire-amt">0</p>
+				<p class="hire-cost-ignore">$1/sec</p>
+				<div class="hire-buttons">
+					<button class="hire" onclick="hire.hire('assist')">+</button>
+					<button class="fire" onclick="hire.fire('assist')">-</button>
+				</div>
+				<p class="thing-desc">
+					Qualified enough to be left alone in the lab.<br>
+					<b>1$ &rarr; 1&#9883;/sec</b>
 				</p>
 			</li>
 		</ul>
@@ -130,15 +145,15 @@
 		<table>
 			<tr>
 				<th>Stat</th>
-				<th colspan=2>Diff/sec</th>
+				<th>Diff</th>
 			</tr>
 			<tr>
 				<td>&#9883;</td>
-				<td id="sci-diff"></td>
+				<td class="sci"></td>
 			</tr>
 			<tr>
 				<td>$</td>
-				<td id="m-diff"></td>
+				<td class="money"></td>
 			</tr>
 		</table>
 	</div>

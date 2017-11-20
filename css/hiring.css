@@ -1,4 +1,4 @@
-.hire-type, .hire-amt, .hire-cost, .hire-buttons {
+.hire-type, .hire-amt, .hire-cost, .hire-cost-ignore, .hire-buttons {
 	display: inline;
 }
 
@@ -32,7 +32,7 @@
 	content: ")";
 }
 
-#hiring p.hire-cost {
+#hiring p.hire-cost, #hiring p.hire-cost-ignore {
 	color: #3db1ff;
 }
 

@@ -10,9 +10,6 @@ var money = 0;
 var mprofit = 0;
 var sprofit = 0;
 
-/// sci/click
-var clickamt = 1;
-
 /// Sell resarch rights
 var RR_sellamt = 1;
 var RR_sellexp = 0;
@@ -36,7 +33,7 @@ function recalc(){ // call ALL the update functions
 }
 
 function clickbutton(){ // called when you click the button
-	sci+=clickamt;
+	sci+=stat.clickamt;
 }
 
 function updateNumbers(){ // Update top numbers
@@ -45,8 +42,13 @@ function updateNumbers(){ // Update top numbers
 }
 
 function addProfit(){
-	sci += sprofit;
-	money += mprofit;
+	if(sci + profits.sci >= 0){
+		sci += profits.sci;
+		money += profits.money;
+	} else {
+		$("#header-numbers").css("color","red");
+		$("#header-numbers").animate({color:"#000"});
+	}
 }
 
 function sellRR(i){
@@ -101,11 +103,11 @@ $(document).ready(function(){
 	$("#cog").css("bottom", $("#cogmenu").height() + $("#cog").height()/2 + 5);
 	$(".dropdown").css("max-width", $(document).width());
 	
-	recalc();
 
 	// edge? display a warning.
 	if(navigator.userAgent.match(/edge/i)){
 		$("#UserAgent").text("Working on proper Edge support.");
 	}
-	// that was anti-climactic.
+	
+	recalc();
 });
