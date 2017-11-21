@@ -22,7 +22,7 @@ var menu = false;
 /// Classes
 var stat = new Stat();
 var hire = new Hire();
-
+var upgr = new Upgrades();
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
 

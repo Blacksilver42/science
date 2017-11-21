@@ -6,7 +6,7 @@
 	left: 1px;
 	padding: 10px;
 	padding-top: 30px;
-	width: 400px;
+	width: min-content;
 }
 
 .dropbutton {

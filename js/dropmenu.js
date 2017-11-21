@@ -4,10 +4,11 @@ var MOVE_TIME = 800;
 function toggleDropMenu(id){
 	var arrow = $(id).siblings(".dropbutton").children(".droparrow");
 	
-	if($(id).css('width') != "400px"){
+/*	if($(id).css('width') != "400px"){
 		console.log("Stop it!");
 		return;
 	}
+*/
 
 	if($(id).css('display') == 'block'){
 		// currently open; hide.

@@ -4,7 +4,7 @@
 
 #hiring ul {
 	padding-left: 20px;
-	padding-right: 10px;
+	padding-right: 0px;
 	width: auto;
 }
 
@@ -21,7 +21,7 @@
 #hiring .hire-entry {
 	list-style: none;
 	overflow: hidden;
-	width: 375px;
+	width: 350px;
 }
 
 #hiring p.hire-amt::before {
