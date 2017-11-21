@@ -51,135 +51,111 @@
 
 
 
-
-<!-- =========================================================================================
-                                      SELL RESEARCH RIGHTS
-========================================================================================== -->
+<div id="col-1">
 
 
 
-
-
-<div class="box" id="sellRR">
-	<button onclick="sellRR()">Sell research rights</button>
-	<button onclick="sellRR(1)">+</button>
-	<button onclick="sellRR(-1)">-</button>
-	(x<span class="amt">1</span>)
-	<span class="notenough">Not enough &#9883;...</span>
-	<p class="thing-desc">
-		Convert SCIENCE! to money.
-	</p>
-</div>
-
-
-
-
-
-<!-- =========================================================================================
-                                           HIRING
-========================================================================================== -->
-
-
-
-
-
-<div class="box">
-	<button class="dropbutton" onclick="toggleDropMenu('#hiring');">Hiring <p class="droparrow">&#128898;</p></button>
-	<div id="hiring" class="dropdown">
-		<ul>
-			<li class="hire-entry" id="hire-intern">
-				<p class="hire-type">Intern</p>
-				<p class="hire-amt">0</p>
-				<p class="hire-cost">---</p>
-				<div class="hire-buttons">
-					<button class="hire" onclick="hire.hire('intern')">+</button>
-					<button class="fire" onclick="hire.fire('intern')">-</button>
-				</div>
-				<p class="thing-desc">
-					Gets you coffee, so you can spend more time doing SCIENCE!.
-					<br>
-					<b>+1 &#9883;/click</b>
-				</p>
-			</li>
-			
-			<li class="hire-entry" id="hire-accountant">
-				<p class="hire-type">SpreadBot</p>
-				<p class="hire-amt">0</p>
-				<p class="hire-cost">---</p>
-				<div class="hire-buttons">
-					<button class="hire" onclick="hire.hire('accountant')">+</button>
-					<button class="fire" onclick="hire.fire('accountant')">-</button>
-				</div>
-				<p class="thing-desc">
-					Spreadsheet whiz.
-					<br>
-					<b>1&#9883; &rarr; 1$/sec</b>
-				</p>
-			</li>
-			
-			<li class="hire-entry" id="hire-assist">
-				<p class="hire-type">Assistant</p>
-				<p class="hire-amt">0</p>
-				<p class="hire-cost-ignore">$1/sec</p>
-				<div class="hire-buttons">
-					<button class="hire" onclick="hire.hire('assist')">+</button>
-					<button class="fire" onclick="hire.fire('assist')">-</button>
-				</div>
-				<p class="thing-desc">
-					Qualified enough to be left alone in the lab.<br>
-					<b>1$ &rarr; 2&#9883;/sec</b>
-				</p>
-			</li>
-		</ul>
+	<div class="box" id="sellRR">
+		<button onclick="sellRR()">Sell research rights</button>
+		<button onclick="sellRR(1)">+</button>
+		<button onclick="sellRR(-1)">-</button>
+		(x<span class="amt">1</span>)
+		<span class="notenough">Not enough &#9883;...</span>
+		<p class="thing-desc">
+			Convert SCIENCE! to money.
+		</p>
 	</div>
-</div>
 
 
 
 
 
-<!-- =========================================================================================
-                                            STATS
-========================================================================================== -->
-
-
-
-
-<div class="box">
-	<button class="dropbutton" onclick="toggleDropMenu('#stats');">Stats<p class="droparrow">&#128898;</p></button>
-	<div id="stats" class="dropdown">
-		<table>
-			<tr>
-				<th>Stat</th>
-				<th>Diff</th>
-				<th>Total</th>
-			</tr>
-			<tr>
-				<td>&#9883;</td>
-				<td class="sci"></td>
-				<td class="sci-total"></td>
-			</tr>
-			<tr>
-				<td>$</td>
-				<td class="money"></td>
-				<td class="money-total"></td>
-			</tr>
-		</table>
+	<div class="box">
+		<button class="dropbutton" onclick="toggleDropMenu('#hiring');">Hiring <p class="droparrow">&#128898;</p></button>
+		<div id="hiring" class="dropdown">
+			<ul>
+				<li class="hire-entry" id="hire-intern">
+					<p class="hire-type">Intern</p>
+					<p class="hire-amt">0</p>
+					<p class="hire-cost">---</p>
+					<div class="hire-buttons">
+						<button class="hire" onclick="hire.hire('intern')">+</button>
+						<button class="fire" onclick="hire.fire('intern')">-</button>
+					</div>
+					<p class="thing-desc">
+						Gets you coffee, so you can spend more time doing SCIENCE!.
+						<br>
+						<b>+1 &#9883;/click</b>
+					</p>
+				</li>
+				
+				<li class="hire-entry" id="hire-accountant">
+					<p class="hire-type">SpreadBot</p>
+					<p class="hire-amt">0</p>
+					<p class="hire-cost">---</p>
+					<div class="hire-buttons">
+						<button class="hire" onclick="hire.hire('accountant')">+</button>
+						<button class="fire" onclick="hire.fire('accountant')">-</button>
+					</div>
+					<p class="thing-desc">
+						Spreadsheet whiz.
+						<br>
+						<b>1&#9883; &rarr; 1$/sec</b>
+					</p>
+				</li>
+				
+				<li class="hire-entry" id="hire-assist">
+					<p class="hire-type">Assistant</p>
+					<p class="hire-amt">0</p>
+					<p class="hire-cost-ignore">$1/sec</p>
+					<div class="hire-buttons">
+						<button class="hire" onclick="hire.hire('assist')">+</button>
+						<button class="fire" onclick="hire.fire('assist')">-</button>
+					</div>
+					<p class="thing-desc">
+						Qualified enough to be left alone in the lab.<br>
+						<b>1$ &rarr; 2&#9883;/sec</b>
+					</p>
+				</li>
+			</ul>
+		</div>
 	</div>
-</div>
 
 
 
 
-<!-- =========================================================================================
-                                           COG MENU
-========================================================================================== -->
+
+	<div class="box">
+		<button class="dropbutton" onclick="toggleDropMenu('#stats');">Stats<p class="droparrow">&#128898;</p></button>
+		<div id="stats" class="dropdown">
+			<table>
+				<tr>
+					<th>Stat</th>
+					<th>Diff</th>
+					<th>Total</th>
+				</tr>
+				<tr>
+					<td>&#9883;</td>
+					<td class="sci"></td>
+					<td class="sci-total"></td>
+				</tr>
+				<tr>
+					<td>$</td>
+					<td class="money"></td>
+					<td class="money-total"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</div> <!-- #col-l -->
 
 
 
 <div id="cogmenu">
-	<img id="cog" alt="Menu" onclick="cogmenu();" title="Menu"
-		src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqwW55NHAiJ20ghZHtdRiPZqH1-Nl9Z7jpTvdmx-Cx1qp3IkL0wQ">
+	<img id="cog" alt="Menu" onclick="cogmenu();"
+		title="<3 the noun project"
+		src="/science/cog.png">
 	<a href="http://github.com/Blacksilver42/science" target="_blank">github</a> &bull; <a href="/futura">Futura</a>
 	<h2 style="width: 100%; clear:both">DISCLAIMER: WIP. Things will be broken sometimes.</h2>
 	<button onclick="save()">Save</button>
