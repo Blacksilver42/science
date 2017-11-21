@@ -1,0 +1,24 @@
+#stats {
+
+}
+
+#stats td, #stats th {
+	border-right: 1px solid grey;
+	padding: 5px;
+}
+
+#stats td {
+	text-align: center;
+}
+
+#stats td:first-child {
+	text-align: right;
+}
+
+#stats td:last-child, #stats th:last-child {
+	border-right: none;
+}
+
+#stats th {
+	border-bottom: 1px solid black;
+}
