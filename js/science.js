@@ -45,6 +45,10 @@ function addProfit(){
 	if((sci + profits.sci >= 0) && (money + profits.money >= 0)){
 		sci += profits.sci;
 		money += profits.money;
+
+		vstats.sci_total += profits.raw_sci;
+		vstats.money_total += profits.raw_money;
+
 		$("#header-numbers").css("color","black");
 	} else {
 		$("#header-numbers").css("color","red");
@@ -82,7 +86,7 @@ function save(){
 	Cookies.set('SCIENCE', {
 		sci: sci,
 		money: money,
-		stats: stats,
+		vstats: vstats,
 		employ: employ,
 	});
 	$("#saved").show();
@@ -95,7 +99,7 @@ function load(){
 	x = JSON.parse(x);
 	sci = x.sci;
 	money = x.money;
-	stats = x.stats;
+	vstats = x.vstats;
 	employ = x.employ;
 	recalc();
 }

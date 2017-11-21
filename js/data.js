@@ -6,13 +6,15 @@ var profits = {
 	money: 0
 };
 
+var raw_profits = JSON.parse(JSON.stringify(profits));
+
 var BASE_EMPLOY_DATA = {
 	intern:	{
 		amt: 0,
 		cost: 100,
 		click: 1
 	},
-	accountant: {
+	accountant: { // name changed to SpreadBot
 		amt: 0,
 		cost: 500,
 		profits: {
@@ -30,3 +32,7 @@ var BASE_EMPLOY_DATA = {
 	}
 };
 
+var vstats = {
+	sci_total: 0,
+	money_total: 0
+}
