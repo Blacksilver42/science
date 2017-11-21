@@ -133,16 +133,13 @@ $(document).ready(function(){
 	setInterval(recalc, 5000);
 
 	// Dynamic css
-	$("#cog").css("bottom", $("#cogmenu").height() + $("#cog").height()/2 + 5);
+	$("#cog").css("top", $("#cog").height()*-1.25);
 	$(".dropdown").css("max-width", $(document).width());
 	
 	/// hover in #hiring
 	//$(".hire-entry").hover(descHover); $(".thing-desc").hide();
 
-	// edge? display a warning.
-	if(navigator.userAgent.match(/edge/i)){
-		$("#UserAgent").text("Working on proper Edge support.");
-	}
+	$("#UserAgent").text(navigator.userAgent);
 	
 	recalc();
 });
