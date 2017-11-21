@@ -24,8 +24,13 @@ class Upgrades {
 		if(window[x.unlock_type] < x.unlock) return;
 		window[x.unlock_type] -= x.cost;
 		upgrade.push(n);
+		this.fix();
+	}
+	
+	fix(){
 		// remove dupes & sort
 		upgrade = Array.from(new Set(upgrade));
 		upgrade.sort(function(a, b){return a-b});
+
 	}
 }
