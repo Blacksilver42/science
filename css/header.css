@@ -2,43 +2,32 @@
 	border-bottom: 1px solid blue;
 	padding: 10px;
 	padding-left: 0;
-}
-
-
-
-/************************************************ #header-numbers */
-
-
-
-#header-numbers {
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
-#header-numbers p {
-	display: inline-block;
-	margin: 5px;
-}
 
-#header-numbers p:first-child {
-	width: 1em;
-	text-align: right;
-}
-
-#stat-sci, #stat-money {
+#header td {
 	width: max-content;
-	margin: 0;
+}
+
+#header td.r {
+	width: 50px;
+	text-align: right;
+	padding-right: 10px;
 }
 
 
 /************************************************ #button */
 
 
-#button {
-	margin: 5px;
-	position: absolute;
-	right: 10px;
-	top: 19px;
+#header #button {
+	vertical-align: middle;
+	text-align: right;
+	border-right: 1px solid black;
+	margin-right: 10px;
+	width: 200px;
+	padding-right: 10px;
 }
 
 #button h1 {
@@ -53,3 +42,6 @@
 	content:"\269b/click";
 }
 
+#sciPerClick {
+	margin-bottom: 0;
+}

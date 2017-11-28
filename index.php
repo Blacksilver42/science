@@ -6,17 +6,27 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-	
+	<!--<script src="https://cdn.jsdelivr.net/npm/mathjs@3.17.0/core.js"></script>-->
+<?php if($_GET["dev"]==1){ ?>
 	<script src="js/animateRotate.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/dropmenu.js"></script>
-	
 	<script src="js/hiring.js"></script>
 	<script src="js/stat.js"></script>
 	<script src="js/upgrades.js"></script>
-	
 	<script src="js/science.js"></script>
-	
+<?php } else { ?>
+	<script src="min.js"></script>
+<!-- use ``?dev=1'' to use these easy-to-read scripts:
+	<script src="js/animateRotate.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/dropmenu.js"></script>
+	<script src="js/hiring.js"></script>
+	<script src="js/stat.js"></script>
+	<script src="js/upgrades.js"></script>
+	<script src="js/science.js"></script>
+-->
+<?php } ?>
 	
 		
 	<link rel="stylesheet" type="text/css" href="/master.css">
@@ -33,24 +43,26 @@
 	
 </head>
 <body>
-
-
-<div id="header">
-	<div id="header-numbers">
-		<div id="stat-sci">
-			<p>&#9883;</p>
-			<p id="sci">JS error</p>
-		</div>
-		<div id="stat-money">
-			<p>$</p>
-			<p id="money">JS error</p>
-		</div>
-	</div>
-	<div id="button">
-		<button onclick="clickbutton()"><h1>SCIENCE!</h1></button>
-		<p id="sciPerClick" class="thing-desc">1</p>
-	</div>
-</div>
+<!--
+<p style="color:red; font-weight: bold">
+Everything is broken :/
+</p>
+-->
+<table id="header">
+	<tr>
+		<td id="button" rowspan=2>
+			<button onclick="clickbutton()"><h1>SCIENCE!</h1></button>
+			<p id="sciPerClick" class="thing-desc">1</p>
+		</td>
+		<td class="r">&#9883;</td>
+		<td id="sci"></td>
+	</tr>
+	<tr>
+		<td class="r">$</td>
+		<td id="money">JS error</td>
+		<td></td>
+	</tr>
+</table>
 
 
 
