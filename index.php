@@ -7,6 +7,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<!--<script src="https://cdn.jsdelivr.net/npm/mathjs@3.17.0/core.js"></script>-->
+
+
+	<script src="/git/website-scripts/thousep2.js"></script>
 <?php if($_GET["dev"]==1){ ?>
 	<script src="js/animateRotate.js"></script>
 	<script src="js/data.js"></script>
@@ -17,7 +20,7 @@
 	<script src="js/science.js"></script>
 <?php } else { ?>
 	<script src="min.js"></script>
-<!-- use ``?dev=1'' to use these easy-to-read scripts:
+<!-- add ``?dev=1'' to use these easier-to-read scripts:
 	<script src="js/animateRotate.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/dropmenu.js"></script>

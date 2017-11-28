@@ -37,8 +37,8 @@ function clickbutton(){ // called when you click the button
 }
 
 function updateNumbers(){ // Update top numbers
-	$("#sci").html(sci);
-	$("#money").html(money);
+	$("#sci").html(thousep2(sci));
+	$("#money").html(thousep2(money));
 }
 
 function addProfit(){
