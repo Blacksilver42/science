@@ -6,6 +6,6 @@
         -- GLaDOS
         
 
-1. Do science
+1. Do science.
 2. PROFIT!
 3. ???
