@@ -83,12 +83,12 @@ function descHover(e){
 
 
 function save(){
-	localStorage["science_save"] = {
+	localStorage["science_save"] = JSON.stringify({
 		sci: sci,
 		money: money,
 		vstats: vstats,
 		employ: employ,
-	};
+	});
 	$("#saved").show();
 	$("#saved").delay(500).fadeOut();
 }
