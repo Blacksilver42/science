@@ -63,3 +63,14 @@ button {
 	padding: 5px;
 	background: white;
 }
+
+/************************************************ MISC IDS */
+
+p#scaryredwarning {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin: 0px;
+	padding: 5px;
+}

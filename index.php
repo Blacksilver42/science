@@ -10,7 +10,6 @@
 
 
 	<script src="/git/website-scripts/thousep2.js"></script>
-<?php if($_GET["dev"]==1){ ?>
 	<script src="js/animateRotate.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/dropmenu.js"></script>
@@ -18,18 +17,6 @@
 	<script src="js/stat.js"></script>
 	<script src="js/upgrades.js"></script>
 	<script src="js/science.js"></script>
-<?php } else { ?>
-	<script src="min.js"></script>
-<!-- add ``?dev=1'' to use these easier-to-read scripts:
-	<script src="js/animateRotate.js"></script>
-	<script src="js/data.js"></script>
-	<script src="js/dropmenu.js"></script>
-	<script src="js/hiring.js"></script>
-	<script src="js/stat.js"></script>
-	<script src="js/upgrades.js"></script>
-	<script src="js/science.js"></script>
--->
-<?php } ?>
 	
 		
 	<link rel="stylesheet" type="text/css" href="/master.css">
@@ -46,11 +33,11 @@
 	
 </head>
 <body>
-<!--
-<p style="color:red; font-weight: bold">
-Everything is broken :/
+<?php if(shell_exec("git rev-parse --abbrev-ref HEAD") == "bleeding\n") { ?>
+<p id="scaryredwarning">
+Bleeding edge branch. Use at your own risk!
 </p>
--->
+<?php } ?>
 <table id="header">
 	<tr>
 		<td id="button" rowspan=2>
