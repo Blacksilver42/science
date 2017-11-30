@@ -83,18 +83,18 @@ function descHover(e){
 
 
 function save(){
-	Cookies.set('SCIENCE', {
+	localStorage["science_save"] = {
 		sci: sci,
 		money: money,
 		vstats: vstats,
 		employ: employ,
-	});
+	};
 	$("#saved").show();
 	$("#saved").delay(500).fadeOut();
 }
 
 function load(){
-	var x = Cookies.get('SCIENCE');
+	var x = localStorage["science_save"];
 	if(x == undefined) return;
 	x = JSON.parse(x);
 	sci = x.sci;
