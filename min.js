@@ -1,3 +1,4 @@
+
 // Credit: stackoverflow.com/questions/15191058/css-rotation-cross-browser-with-jquery-animate
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete){
