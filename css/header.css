@@ -23,11 +23,10 @@
 
 #header #button {
 	vertical-align: middle;
-	text-align: right;
+	text-align: center;
 	border-right: 1px solid black;
-	margin-right: 10px;
-	width: 200px;
-	padding-right: 10px;
+	width: 1%;
+	padding: 10px;
 }
 
 #button h1 {

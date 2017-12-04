@@ -3,15 +3,15 @@
 }
 
 #hiring ul {
-	padding-left: 20px;
-	padding-right: 0px;
 	width: auto;
+	padding-left: 0px;
 }
 
 #hiring li {
 	width: auto;
 	border-bottom: 1px solid grey;
 	position: relative;
+	padding-left: 0px;
 }
 
 #hiring li:last-child {

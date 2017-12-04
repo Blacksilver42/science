@@ -26,23 +26,20 @@ button {
 
 
 
-.box {
-	margin: 10px 2px;
-	padding: 5px;
-	width: max-content;
-	min-height: 2em;
-}
-
 
 .thing-desc {
 	color: grey;
 	font-size: 10px;
 	font-style: italic;
 	margin-top: 7px;
+	width: max-content;
 }
 
 
 
+.box {
+	width: 100%;
+}
 
 /************************************************ OPT FRAME */
 
@@ -67,10 +64,15 @@ button {
 /************************************************ MISC IDS */
 
 p#scaryredwarning {
-	color: red;
+	color: darkred;
+	background: red;
 	font-weight: bold;
 	text-align: center;
 	border-bottom: 1px solid black;
 	margin: 0px;
 	padding: 5px;
+}
+
+#content {
+	width: 100%;
 }

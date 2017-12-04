@@ -23,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/dropdown.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/hiring.css">
 	<link rel="stylesheet" type="text/css" href="css/stat.css">
 	<link rel="stylesheet" type="text/css" href="css/upgrades.css">
@@ -33,7 +33,9 @@
 	
 </head>
 <body>
-<?php if(shell_exec("git rev-parse --abbrev-ref HEAD") == "bleeding\n") { ?>
+<?php
+// check if the git branch is 'bleeding'.
+if(shell_exec("git rev-parse --abbrev-ref HEAD") == "bleeding\n") { ?>
 <p id="scaryredwarning">
 Bleeding edge branch. Use at your own risk!
 </p>
@@ -50,117 +52,20 @@ Bleeding edge branch. Use at your own risk!
 	<tr>
 		<td class="r">$</td>
 		<td id="money">JS error</td>
-		<td></td>
 	</tr>
 </table>
 
 
+<table id="nav">
+	<tr>
+		<td onclick="$('#content').load('main.html'); recalc();">Main</td>
+		<td onclick="$('#content').load('upgrades.html'); recalc();">Upgrades</td>
+		<td>Achivements</td>
+	</tr>
+</table>
 
-
-<div id="main">
-
-
-
-	<div class="box" id="sellRR">
-		<button onclick="sellRR()">Sell research rights</button>
-		<button onclick="sellRR(1)">+</button>
-		<button onclick="sellRR(-1)">-</button>
-		(x<span class="amt">1</span>)
-		<span class="notenough">Not enough &#9883;...</span>
-		<p class="thing-desc">
-			Convert SCIENCE! to money.
-		</p>
-	</div>
-
-
-
-
-
-	<div class="box">
-		<button class="dropbutton" onclick="toggleDropMenu('#hiring');">Hiring <p class="droparrow">&#128898;</p></button>
-		<div id="hiring" class="dropdown">
-			<ul>
-				<li class="hire-entry" id="hire-intern">
-					<p class="hire-type">Intern</p>
-					<p class="hire-amt">0</p>
-					<p class="hire-cost">---</p>
-					<div class="hire-buttons">
-						<button class="hire" onclick="hire.hire('intern')">+</button>
-						<button class="fire" onclick="hire.fire('intern')">-</button>
-					</div>
-					<p class="thing-desc">
-						Gets you coffee, so you can spend more time doing SCIENCE!.
-						<br>
-						<b>+1 &#9883;/click</b>
-					</p>
-				</li>
-				
-				<li class="hire-entry" id="hire-accountant">
-					<p class="hire-type">SpreadBot</p>
-					<p class="hire-amt">0</p>
-					<p class="hire-cost">---</p>
-					<div class="hire-buttons">
-						<button class="hire" onclick="hire.hire('accountant')">+</button>
-						<button class="fire" onclick="hire.fire('accountant')">-</button>
-					</div>
-					<p class="thing-desc">
-						Spreadsheet whiz.
-						<br>
-						<b>1&#9883; &rarr; 1$/sec</b>
-					</p>
-				</li>
-				
-				<li class="hire-entry" id="hire-assist">
-					<p class="hire-type">Assistant</p>
-					<p class="hire-amt">0</p>
-					<p class="hire-cost-ignore">$1/sec</p>
-					<div class="hire-buttons">
-						<button class="hire" onclick="hire.hire('assist')">+</button>
-						<button class="fire" onclick="hire.fire('assist')">-</button>
-					</div>
-					<p class="thing-desc">
-						Qualified enough to be left alone in the lab.<br>
-						<b>1$ &rarr; 2&#9883;/sec</b>
-					</p>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-
-
-
-
-	<div class="box">
-		<button class="dropbutton" onclick="toggleDropMenu('#stats');">Stats<p class="droparrow">&#128898;</p></button>
-		<div id="stats" class="dropdown">
-			<table>
-				<tr>
-					<th>Stat</th>
-					<th>Diff</th>
-					<th>Total</th>
-				</tr>
-				<tr>
-					<td>&#9883;</td>
-					<td class="sci"></td>
-					<td class="sci-total"></td>
-				</tr>
-				<tr>
-					<td>$</td>
-					<td class="money"></td>
-					<td class="money-total"></td>
-				</tr>
-			</table>
-		</div>
-	</div>
-
-</div>
-
-<div class="box" id="upgrades">
-	<ul>
-		<li>
-		</li>
-	</ul>
+<div id="content">
+	<!-- xyzzy! -->
 </div>
 
 <div id="cogmenu">

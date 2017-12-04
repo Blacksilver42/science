@@ -128,6 +128,7 @@ function cogmenu(){
 
 
 $(document).ready(function(){
+	$("#content").load("main.html");
 	load();
 
 	/// Intervals:
