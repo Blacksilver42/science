@@ -8,15 +8,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<!--<script src="https://cdn.jsdelivr.net/npm/mathjs@3.17.0/core.js"></script>-->
 
-
 	<script src="/git/website-scripts/thousep2.js"></script>
-	<script src="js/animateRotate.js"></script>
-	<script src="js/data.js"></script>
-	<script src="js/dropmenu.js"></script>
-	<script src="js/hiring.js"></script>
-	<script src="js/stat.js"></script>
-	<script src="js/upgrades.js"></script>
-	<script src="js/science.js"></script>
+	<script src="min.js"></script>
 	
 		
 	<link rel="stylesheet" type="text/css" href="/master.css">
