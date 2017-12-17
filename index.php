@@ -10,9 +10,12 @@
 
 	<script src="/git/website-scripts/thousep2.js"></script>
 	<script src="min.js"></script>
+
 	
-		
 	<link rel="stylesheet" type="text/css" href="/master.css">
+	<link rel="stylesheet" type="text/css" href="min.css">
+	
+<!--		
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/dropdown.css">
@@ -20,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/hiring.css">
 	<link rel="stylesheet" type="text/css" href="css/stat.css">
 	<link rel="stylesheet" type="text/css" href="css/upgrades.css">
-	
+-->
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	

@@ -1,14 +1,16 @@
-.PHONY: clean
+.PHONY: clean build
 
-min.js: js/*.js
-	echo '' > min.js
-	cat js/animateRotate.js >> min.js
-	cat js/data.js >> min.js
-	cat js/dropmenu.js >> min.js
-	cat js/hiring.js >> min.js
-	cat js/stat.js >> min.js
-	cat js/upgrades.js >> min.js
-	cat js/science.js >> min.js
+DOTJS = js/animateRotate.js js/data.js js/dropmenu.js js/hiring.js js/stat.js js/upgrades.js js/science.js
+DOTCSS = css/dropdown.css css/header.css css/hiring.css css/nav.css css/stat.css css/style.css css/upgrades.css
+
+build: min.js min.css
+
+min.js: $(DOTJS)
+	cat $(DOTJS) > min.js
+
+min.css: $(DOTCSS)
+	cat $(DOTCSS) > min.css
+	
 
 clean:
-	rm min.js
+	rm min.js min.css

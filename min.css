@@ -1,0 +1,259 @@
+.dropdown {
+	display: none;
+	border: 1px solid black;
+	position: relative;
+	top: 1px;
+	left: 1px;
+	padding: 10px;
+	padding-top: 30px;
+	width: min-content;
+}
+
+.dropbutton {
+	position: absolute;
+	width: max-content;
+	z-index: 2;
+}
+
+.dropdown > * {
+	margin: 0;
+}
+
+#header {
+	border-bottom: 1px solid blue;
+	padding: 10px;
+	padding-left: 0;
+	width: 100%;
+	font-size: 2em;
+}
+
+
+#header td {
+	width: max-content;
+}
+
+#header td.r {
+	width: 50px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+/************************************************ #button */
+
+
+#header #button {
+	vertical-align: middle;
+	text-align: center;
+	border-right: 1px solid black;
+	width: 1%;
+	padding: 10px;
+}
+
+#button h1 {
+	margin: 5px;
+}
+
+#sciPerClick::before {
+	content: "+";
+}
+
+#sciPerClick::after {
+	content:"\269b/click";
+}
+
+#sciPerClick {
+	margin-bottom: 0;
+}
+.hire-type, .hire-amt, .hire-cost, .hire-cost-ignore, .hire-buttons {
+	display: inline;
+}
+
+#hiring ul {
+	width: auto;
+	padding-left: 0px;
+}
+
+#hiring li {
+	width: auto;
+	border-bottom: 1px solid grey;
+	position: relative;
+	padding-left: 0px;
+}
+
+#hiring li:last-child {
+	border-bottom: none;
+}
+
+#hiring .hire-entry {
+	list-style: none;
+	overflow: hidden;
+	width: 350px;
+}
+
+#hiring p.hire-amt::before {
+	content: "(";
+}
+
+#hiring p.hire-amt::after {
+	content: ")";
+}
+
+#hiring p.hire-cost, #hiring p.hire-cost-ignore {
+	color: #3db1ff;
+}
+
+#hiring p.hire-cost::before {
+	content: "$";
+}
+
+#hiring div.hire-buttons {
+	float: right;
+}
+
+#hiring p.thing-desc {
+	display: block;
+}
+
+.droparrow {
+	display: inline-block;
+	margin: 0;
+	min-width: 15px;
+	text-align: center;
+}
+#nav {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+#nav td {
+	width: 1%;
+	text-align: center;
+	cursor: pointer;
+	border-right: 1px solid black;
+	font-size: 1.5em;
+	padding: 10px 0px;
+
+	background: white;
+	background: linear-gradient(lightgray, white, white);
+	background: -webkit-linear-gradient(lightgray, white, white);
+	background: -moz-linear-gradient(lightgray, white, white);
+}
+
+#nav td:last-child {
+	border-right: none;
+}
+#stats {
+
+}
+
+#stats td, #stats th {
+	border-right: 1px solid grey;
+	padding: 5px;
+}
+
+#stats td {
+	text-align: center;
+}
+
+#stats td:first-child {
+	text-align: right;
+}
+
+#stats td:last-child, #stats th:last-child {
+	border-right: none;
+}
+
+#stats th {
+	border-bottom: 1px solid black;
+}
+/************************************************ GENERICS & CLASSES */
+
+
+*,div,p,h1,h2,h3 {
+	/* If Futura is available, use it.
+	 * Else, it'll fall back to Arial or sans.
+	 */
+	font-family: Futura, Arial, sans-serif;
+}
+
+
+
+button {
+	margin: 1px;
+}
+
+
+
+.notenough {
+	/* Little popup when you don't have enough of X to do Y. */
+	display: none;
+	font-style: italic;
+	color: darkgrey;
+	margin-left: 10px;
+}
+
+
+
+
+.thing-desc {
+	color: grey;
+	font-size: 10px;
+	font-style: italic;
+	margin-top: 7px;
+	width: max-content;
+}
+
+
+
+.box {
+	width: 100%;
+}
+
+/************************************************ OPT FRAME */
+
+#cog {
+	position: absolute;
+	bottom: 4em;
+	right: 15px;
+	width: 2em;
+	cursor: pointer;
+}
+
+#cogmenu {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	border-top: 2px solid blue;
+	padding: 5px;
+	background: white;
+}
+
+#ocd {
+	position: absolute;
+	right: 15px;
+	bottom: 5px;
+}
+
+/************************************************ MISC IDS */
+
+p#scaryredwarning {
+	color: darkred;
+	background: red;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin: 0px;
+	padding: 5px;
+}
+
+#content {
+	width: 100%;
+}
+#upgrades {
+}
+
+#upgrades ul {
+	list-style-type: none;
+}
