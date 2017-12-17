@@ -36,3 +36,17 @@ var vstats = {
 	sci_total: 0,
 	money_total: 0
 }
+
+
+var upgrades_list = [
+	{
+		name: "Better coffee",
+		price: {
+			money: 1000
+		},
+		unlock: {
+			money: 500
+		},
+		desc: "Better coffee machine.<br>Interns give 2sci/click"
+	}
+];

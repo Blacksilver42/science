@@ -1,0 +1,22 @@
+#nav {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+#nav td {
+	width: 1%;
+	text-align: center;
+	cursor: pointer;
+	border-right: 1px solid black;
+	font-size: 1.5em;
+	padding: 10px 0px;
+
+	background: white;
+	background: linear-gradient(lightgray, white, white);
+	background: -webkit-linear-gradient(lightgray, white, white);
+	background: -moz-linear-gradient(lightgray, white, white);
+}
+
+#nav td:last-child {
+	border-right: none;
+}
