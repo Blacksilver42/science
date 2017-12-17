@@ -61,6 +61,12 @@ button {
 	background: white;
 }
 
+#ocd {
+	position: absolute;
+	right: 15px;
+	bottom: 5px;
+}
+
 /************************************************ MISC IDS */
 
 p#scaryredwarning {

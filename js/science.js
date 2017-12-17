@@ -26,6 +26,12 @@ var upgr = new Upgrades();
 
 ///////////////////////////////////////////////// FUNCTIONS -- MISC
 
+function ocd(){
+	money = Math.floor(money);
+	sci = Math.floor(sci);
+	recalc();
+}
+
 function recalc(){ // call ALL the update functions
 	hire.update();
 	stat.update();

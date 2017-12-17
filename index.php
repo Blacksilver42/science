@@ -79,6 +79,7 @@ Bleeding edge branch. Use at your own risk!
 	<span id="saved" style="display:none color:grey">Saved &check;</span>
 	<br>
 	<p id="UserAgent" class="thing-desc"></p>
+	<button id="ocd" onclick="ocd()">OCD</button>
 </div>
 
 </body>
