@@ -1,4 +1,5 @@
 #!/bin/bash
+set -v
 echo "" > min.js
 cat js/animateRotate.js >> min.js
 cat js/data.js >> min.js
