@@ -10,7 +10,8 @@ min.js: $(DOTJS)
 
 min.css: $(DOTCSS)
 	cat $(DOTCSS) > min.css
-	
 
+
+# I'm not sure what you'll use this for, but it's here.
 clean:
 	rm min.js min.css
