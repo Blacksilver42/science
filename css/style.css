@@ -41,6 +41,13 @@ button {
 	width: 100%;
 }
 
+
+.atom {
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+}
+
 /************************************************ OPT FRAME */
 
 #cog {

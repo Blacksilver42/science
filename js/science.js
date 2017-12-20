@@ -36,6 +36,7 @@ function recalc(){ // call ALL the update functions
 	hire.update();
 	stat.update();
 	updateNumbers();
+	$("atom").html("&#9883;");
 }
 
 function clickbutton(){ // called when you click the button
@@ -78,39 +79,6 @@ function sellRR(i){
 	}
 }
 
-function descHover(e){
-	var obj = $(e.target);
-	if(!obj.hasClass("hire-entry")){
-		obj = obj.parent(".hire-entry");
-	}
-	obj = obj.children(".thing-desc");
-	obj.animate({height:"toggle", margin:"toggle"}, 'swing');
-}
-
-
-function save(){
-	localStorage["science_save"] = JSON.stringify({
-		sci: sci,
-		money: money,
-		vstats: vstats,
-		employ: employ,
-	});
-	$("#saved").show();
-	$("#saved").delay(500).fadeOut();
-}
-
-function load(){
-	var x = localStorage["science_save"];
-	if(x == undefined) return;
-	x = JSON.parse(x);
-	sci = x.sci;
-	money = x.money;
-	vstats = x.vstats;
-	employ = x.employ;
-	recalc();
-}
-
-
 ///////////////////////////////////////////////// FUNCTIONS -- COG MENU
 
 function cogmenu(){
@@ -133,8 +101,16 @@ function cogmenu(){
 
 
 
-$(document).ready(function(){
-	$("#content").load("main.html");
+$(document).ready(to);
+
+function to(){
+	loadDisplays().done(rumble)
+}
+
+function rumble(){
+	console.log("Let's rumble, jQuery.");
+	
+	$("#content").html(display[0]);
 	load();
 
 	/// Intervals:
@@ -153,4 +129,4 @@ $(document).ready(function(){
 	$("#UserAgent").text(navigator.userAgent);
 	
 	recalc();
-});
+}

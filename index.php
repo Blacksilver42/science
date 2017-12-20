@@ -34,7 +34,7 @@ Bleeding edge branch. Use at your own risk!
 			<button onclick="clickbutton()"><h1>SCIENCE!</h1></button>
 			<p id="sciPerClick" class="thing-desc">1</p>
 		</td>
-		<td class="r">&#9883;</td>
+		<td class="r"><atom /></td>
 		<td id="sci"></td>
 	</tr>
 	<tr>
@@ -46,9 +46,9 @@ Bleeding edge branch. Use at your own risk!
 
 <table id="nav">
 	<tr>
-		<td onclick="$('#content').load('main.html'); recalc();">Main</td>
-		<td onclick="$('#content').load('upgrades.html'); recalc();">Upgrades</td>
-		<td>Achivements</td>
+		<td onclick="$('#content').html(display[0]); recalc();">Main</td>
+		<td onclick="$('#content').html(display[1]); recalc();">Upgrades</td>
+		<td onclick="$('#content').html(display[2]); recalc();">Achivements</td>
 	</tr>
 </table>
 

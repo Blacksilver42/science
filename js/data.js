@@ -50,3 +50,5 @@ var upgrades_list = [
 		desc: "Better coffee machine.<br>Interns give 2sci/click"
 	}
 ];
+
+var display = {}
